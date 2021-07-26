@@ -1,0 +1,90 @@
+@import 'typography';
+@import 'colors';
+*{
+  margin: 0;
+  padding:0;
+  list-style: none;
+  outline: none;
+}
+body{
+  background: #000;
+  padding: 20px;
+}
+.my-app{
+  width: 500px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 30px;
+}
+
+.create-tweet{
+  margin-bottom:30px;
+  p{
+    font-size: 20px;
+    margin-bottom:15px
+  }
+  textarea{
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 18px;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  .postBtn{
+    border: none;
+    background: #4064AC;
+    color:#fff;
+    font-size: 18px;
+    width: 100%;
+    padding: 15px 25px;
+    cursor: pointer;
+  }
+
+}
+
+
+
+.tweet {
+  border: 1px solid #f1f1f1;
+  box-shadow: 0 4px 8px #f1f1f1;
+  padding: 20px;
+  margin-bottom: 30px;
+  button {
+    border: none;
+    background: inherit;
+    margin-right: 7px;
+    padding: 7px 20px;
+    color: #fff;
+    cursor: pointer;
+  }
+  button.like{
+    background: #4064AC;
+  }
+  button.dislike{
+    background: gray;
+  }
+  button.delete{
+    background: red;
+  }
+
+  ul {
+    margin-bottom: 7px;
+    li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+  }
+  
+  p {
+    margin-bottom: 20px;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+  h5{
+    margin-bottom: 10px;
+  }
+  
+}
+
+
