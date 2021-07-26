@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-const Tweet = ({message, name}) => {
+const Tweet = ({tweet, name, tweets, setTweets}) => {
 
   const [like, setLike] = useState(0);
   const [dislike, setDislike] = useState(0);
@@ -12,12 +12,16 @@ const Tweet = ({message, name}) => {
     setDislike(dislike + 1)
   }
 
+  const deleteHandler = () => {
+    setTweets(tweets.filter((state)=> state.id !== tweet.id));
+  }
+
   return (
 
     <>
       <div className="tweet">
         <h5>{name}</h5>
-        <p>{message}</p>
+        <p>{tweet.message}</p>
         <ul>
           <li>Liked: {like}</li>
           <li>Disliked: {dislike}</li>
@@ -25,7 +29,7 @@ const Tweet = ({message, name}) => {
         <div className="tweet-btns">
           <button onClick={lickHandler} className="like">Like</button>
           <button onClick={dislikeHandler} className="dislike">Dislike</button>
-          <button className="delete">Delete</button>
+          <button onClick={deleteHandler} className="delete">Delete</button>
         </div>
       </div>
     </>
